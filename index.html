@@ -1,23 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=1440">
-  <title>QuickFix — Local Service Finder</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1440">
+<title>QuickFix — Local Service Finder</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- CSS LINK -->
+<link rel="stylesheet" href="style.css">
 
-  <!-- Link CSS -->
-  <link rel="stylesheet" href="style.css">
+<!-- GOOGLE FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- PASTE EVERYTHING INSIDE BODY (but REMOVE <style> and <script>) -->
-<!-- From your code: keep ALL HTML content here -->
+<!-- FLOATING NAV -->
+<div class="page-nav">
+  <button class="pnav-btn active" onclick="go('p1',this)">① Home</button>
+  <button class="pnav-btn" onclick="go('p2',this)">② Services</button>
+  <button class="pnav-btn" onclick="go('p3',this)">③ Profile</button>
+  <button class="pnav-btn" onclick="go('p4',this)">④ Booking</button>
+  <button class="pnav-btn" onclick="go('p5',this)">⑤ Confirmed</button>
+</div>
 
-<!-- Link JS -->
+<div class="screen-wrap">
+
+<!-- PAGE 1 -->
+<div id="p1" class="page active">
+  <nav>
+    <div class="logo" onclick="go('p1',null)">Quick<span>Fix</span></div>
+    <div class="nav-links">
+      <a class="active" onclick="go('p1',null)">Home</a>
+      <a onclick="go('p2',null)">Services</a>
+      <a href="#">Login</a>
+    </div>
+    <button class="nav-cta" onclick="go('p2',null)">Find a Pro</button>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-tag">⚡ 340+ Verified Pros Near You</div>
+    <h1>Find Trusted Local<br>Services Near You</h1>
+    <p>Book certified electricians, plumbers, carpenters & more — in minutes.</p>
+
+    <div class="search-row">
+      <input type="text" placeholder="Search services...">
+      <input class="loc-input" type="text" placeholder="Location">
+      <button class="search-btn" onclick="go('p2',null)">Search</button>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 2 -->
+<div id="p2" class="page">
+  <nav>
+    <div class="logo" onclick="go('p1',null)">Quick<span>Fix</span></div>
+    <div class="nav-links">
+      <a onclick="go('p1',null)">Home</a>
+      <a class="active">Services</a>
+    </div>
+  </nav>
+
+  <div class="content">
+    <h2 style="padding:20px">Service Listings</h2>
+    <button onclick="go('p3',null)">View Profile</button>
+  </div>
+</div>
+
+<!-- PAGE 3 -->
+<div id="p3" class="page">
+  <nav>
+    <div class="logo" onclick="go('p1',null)">Quick<span>Fix</span></div>
+  </nav>
+
+  <div class="content">
+    <h2 style="padding:20px">Worker Profile</h2>
+    <button onclick="go('p4',null)">Book Now</button>
+  </div>
+</div>
+
+<!-- PAGE 4 -->
+<div id="p4" class="page">
+  <nav>
+    <div class="logo" onclick="go('p1',null)">Quick<span>Fix</span></div>
+  </nav>
+
+  <div class="content">
+    <h2 style="padding:20px">Booking Page</h2>
+    <button onclick="go('p5',null)">Confirm Booking</button>
+  </div>
+</div>
+
+<!-- PAGE 5 -->
+<div id="p5" class="page">
+  <nav>
+    <div class="logo" onclick="go('p1',null)">Quick<span>Fix</span></div>
+  </nav>
+
+  <div class="content">
+    <h2 style="padding:20px">Booking Confirmed ✅</h2>
+    <button onclick="go('p1',null)">Back to Home</button>
+  </div>
+</div>
+
+</div>
+
+<!-- JS LINK -->
 <script src="script.js"></script>
 
 </body>
